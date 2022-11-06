@@ -1,0 +1,84 @@
+/* Style Variables */
+:root {
+    /* theme from https://www.color-hex.com/color-palette/98179 dark theme */
+    --white: #fff;
+    --blue-gray: #5885AF;
+    --blue: #007acc;
+    --gray-1: #c0c0c0;
+    --light-gray: #D3D3D3;
+    --gray-2: #3e3e42;
+    --gray-3: #2d2d30;
+    --black-1: #252526;
+    --black-2: #1e1e1e;
+    --border-radius: 0.3rem;
+    --box-shadow: 0 1px 4px 0px rgb(0 0 0 / 20%);
+}
+
+/* Font established for rem units */
+html {
+    font-size: 16px;
+}
+
+/* Base styles */
+body {
+    background: var(--light-gray);
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    color: var(--gray-1);
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* Styles to the title */
+.hero {
+    padding: 3% 4%;
+    background-image: linear-gradient(to right, var(--gray-2), var(--gray-3));
+    color: var(--gray-2);
+}
+
+.app-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background-color: var(--gray-1);
+    color: var(--dark);
+    padding: 0px 10px 5px 10px;
+    display: inline-block;
+    border-radius: var(--border-radius);
+    box-shadow: 6px 5px var(--black-1);
+}
+
+/* new styles */
+.nav-bar {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--gray-1);
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--gray-1);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.no-button:hover {
+    color: var(--light-gray);
+}
+
+.post {
+    border: var(--black-1);
+}

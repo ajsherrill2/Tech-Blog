@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // CREATE blog post route
@@ -13,6 +13,25 @@ router.post('/', withAuth, async (req, res) => {
     res.status(200).json(newPost);
   } catch (err) {
     res.status(400).json(err);
+  }
+});
+
+// UPDATE blog post route
+router.put('/:id', async (req, res) => {
+  try {
+    // update post data
+    const updatedPost = await Post.update(
+      { name: req.body.name, description: req.body.description },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+
+    res.status(200).json(updatedPost);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

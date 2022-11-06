@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// READ one comment route
 router.get('/', async (req, res) => {
   try {
     const comment = await Comment.findAll({});
@@ -11,6 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// READ all comments route
 router.get('/:id', async (req, res) => {
   try {
     const postComments = await Comment.findAll({

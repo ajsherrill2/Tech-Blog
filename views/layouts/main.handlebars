@@ -31,12 +31,12 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
+  <div class="flex-column justify-space-around body">
     <header class="hero justify-content-center">
       <nav class="nav-bar">
         <!-- Conditionally render login or logout links -->
         <a href="/">Home</a>
-        <a href="/profile">Dashboard</a>
+        <a href="/dashboard">Dashboard</a>
         {{#if logged_in}}
         <button class="no-button" id="logout">Logout</button>
         {{else}}
@@ -50,12 +50,12 @@
       {{{ body }}}
     </main>
     <footer class="footer">
-    <div class="row">
-        <p>
-          Tech Blog by <a href="https://github.com/ajsherrill2"> Adam Sherrill</a>
-        </p>
-    </div>
-</footer>
+      <div class="row">
+          <p>
+            Tech Blog by <a href="https://github.com/ajsherrill2" target="_blank"> Adam Sherrill</a>
+          </p>
+      </div>
+    </footer>
   </div>
 
   <!-- Render script for logged in users only -->

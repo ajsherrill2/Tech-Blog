@@ -1,6 +1,6 @@
-const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models');
 const router = require('express').Router();
+const { Post, User, Comment } = require('../models');
+
 
 router.get('/', async (req, res) => {
   try {
@@ -29,14 +29,15 @@ router.get('/', async (req, res) => {
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
-    res.render('homepage', { posts, loggedIn: req.session.loggedIn });
+    res.render('homepage', { posts, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
+// GET login page route
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect('/');
     return;
   }
@@ -47,6 +48,7 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+// GET 
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findOne({
@@ -82,7 +84,7 @@ router.get('/post/:id', async (req, res) => {
     }
 
     const post = postData.get({ plain: true });
-    res.render('single-post', { post, loggedIn: req.session.loggedIn });
+    res.render('single-post', { post, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -123,7 +125,7 @@ router.get('/posts-comments', async (req, res) => {
     }
 
     const post = postData.get({ plain: true });
-    res.render('posts-comments', { post, loggedIn: req.session.loggedIn });
+    res.render('posts-comments', { post, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }

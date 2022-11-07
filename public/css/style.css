@@ -19,17 +19,6 @@ html {
     font-size: 16px;
 }
 
-/* Base styles */
-body {
-    background: var(--light-gray);
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-    font-size: 16px;
-    color: var(--gray-1);
-}
-
 p {
     font-size: 1.2rem;
 }
@@ -79,6 +68,163 @@ p {
     color: var(--light-gray);
 }
 
-.post {
-    border: var(--black-1);
+.post{
+    margin: 20px 0;
+    border: 10px var(--black-1);
+    text-align: right;
+}
+
+.post-title{
+    background-color: var(--gray-2);
+    padding: 15px;
+    margin-top: 0;
+    text-align: left;
+    color: var(--gray-1);
+}
+
+.post-title a:link{
+    color: var(--gray-1);
+    text-decoration: none;
+}
+
+.post-title a:visited{
+    color: var(--gray-1);
+    text-decoration: none;
+}
+
+.post-title a:hover{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.post-body {
+    background-color: var(--gray-1);
+}
+
+.post-content {
+    padding: 10px !important;
+    text-align: left !important;
+}
+
+.post-author {
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.post-button {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.post-username {
+    font-weight: bold;
+}
+
+.dashboard-container {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.footer-margin {
+    margin-top: 50px;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.signup {
+    margin-top: 20px;
+}
+
+.signup-form div {
+    margin-bottom: 20px;
+}
+
+.login-form div {
+    margin-bottom: 20px;
+}
+
+.edit-post-form {
+    margin-top: 20px;
+}
+
+.edit-post-form div {
+    margin-bottom: 20px;
+}
+
+.register {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.single-post-container {
+    margin-top: 20px;
+}
+
+.comment-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.comment-button {
+    margin-top: 20px;
+}
+
+.comment-text {
+    text-align: start;
+    padding: 10px;
+}
+
+.comment-author {
+    padding: 10px;
+    font-weight: bold;
+}
+
+#signup button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.dashboard-post {
+    border: 1px var(--black-1);
+}
+
+.dashboard button {
+    background: var(--blue-gray);
+}
+
+.dashboard button:hover {
+    background-color: var(--blue);
+}
+
+.new-post-button{
+    margin: 20px 0;
+}
+
+.new-post-button a:link {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--gray-1);
+}
+.new-post-button a:visited {
+    color: var(--gray-1);
+}
+.new-post-button a:hover {
+    color: var(--light-gray);
+}
+
+footer{
+    margin-top: 60px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+footer p a {
+    text-decoration: none;
 }

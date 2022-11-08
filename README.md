@@ -4,6 +4,9 @@
 
 In this Project I created the back end and front end for a Tech Blog site. Which utilizes an MVC framework using MySQL, Express.js, Sequelize and handlebars.js in order to allow users to create secure accounts and perform appropriate CRUD operations allowed by the server.
 
+Heroku deployed app:
+(https://desolate-oasis-10594.herokuapp.com/)
+
 ## Table of Contents
 
 - [Installation](#installation)
